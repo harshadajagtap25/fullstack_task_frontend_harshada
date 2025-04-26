@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+#root {
+  min-height: 100vh;
+  /* border: 1px solid red; */
+  @apply lg:flex lg:items-center lg:justify-center;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #92400ea3;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #92400e;
+}
