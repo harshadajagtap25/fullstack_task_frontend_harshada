@@ -1,7 +1,8 @@
 import axios from "axios";
 import { Task } from "../components/Task";
 
-const API_URL = "http://localhost:4000/api";
+// const API_URL = "http://localhost:4000/api";
+const API_URL = "https://todos-ooi8.onrender.com/api";
 
 export const fetchTasks = async (): Promise<Task[]> => {
   try {
