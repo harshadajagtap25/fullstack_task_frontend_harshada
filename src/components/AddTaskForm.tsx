@@ -1,8 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { addTask } from "../services/api";
 import addCircle from "../assets/plus-circle.svg";
 
-const AddTaskForm = ({ onTaskAdded }) => {
+interface AddTaskFormProps {
+  onTaskAdded: () => void;
+}
+
+const AddTaskForm: React.FC<AddTaskFormProps> = ({ onTaskAdded }) => {
   const [content, setContent] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);

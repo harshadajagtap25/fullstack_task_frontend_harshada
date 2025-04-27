@@ -1,6 +1,13 @@
+import React from "react";
+import { Task } from "./Task";
 import TaskItem from "./TaskItem";
 
-const TaskList = ({ tasks, loading }) => {
+interface TaskListProps {
+  tasks: Task[];
+  loading: boolean;
+}
+
+const TaskList: React.FC<TaskListProps> = ({ tasks, loading }) => {
   if (loading) {
     return (
       <div className="task-container p-4">

@@ -1,6 +1,10 @@
 import React from "react";
+import { Task } from "./Task";
 
-const TaskItem = ({ task }) => {
+interface TaskItemProps {
+  task: Task;
+}
+const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
   return (
     <div className="py-2 border-b border-[#C5CAD3]">
       <div className="flex-1">

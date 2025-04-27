@@ -1,11 +1,11 @@
 import axios from "axios";
+import { Task } from "../components/Task";
 
-// const API_URL = "http://localhost:4000/api";
-const API_URL = "http://localhost:8080/api";
+const API_URL = "http://localhost:4000/api";
 
-export const fetchTasks = async (): Promise<[]> => {
+export const fetchTasks = async (): Promise<Task[]> => {
   try {
-    const response = await axios.get<[]>(`${API_URL}/fetchAllTasks`);
+    const response = await axios.get<Task[]>(`${API_URL}/fetchAllTasks`);
     return response.data;
   } catch (error) {
     console.error("Error fetching tasks:", error);
@@ -13,9 +13,9 @@ export const fetchTasks = async (): Promise<[]> => {
   }
 };
 
-export const addTask = async (content: string): Promise<any> => {
+export const addTask = async (content: string): Promise<Task> => {
   try {
-    const response = await axios.post<any>(`${API_URL}/add`, { content });
+    const response = await axios.post<Task>(`${API_URL}/tasks`, { content });
     return response.data;
   } catch (error) {
     console.error("Error adding task:", error);

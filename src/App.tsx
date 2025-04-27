@@ -1,11 +1,13 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import AddTaskForm from "./components/AddTaskForm";
 import TaskList from "./components/TaskList";
 import { fetchTasks } from "./services/api";
 import noteApp from "./assets/notes-app.svg";
+import { Task } from "./components/Task";
 
-function App() {
-  const [tasks, setTasks] = useState([]);
+const App: React.FC = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -49,6 +51,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
